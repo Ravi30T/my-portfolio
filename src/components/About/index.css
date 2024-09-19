@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=TT+Octosquares&display=swap');  
+@import url('https://fonts.cdnfonts.com/css/cosmic');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Handjet:wght@100..900&display=swap');
+
+.about-section {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    gap: 45px;
+    align-items: center;
+    overflow: hidden;
+    background-color: transparent;
+}
+
+.pro-pic {
+    height: 500px;
+    border-radius: 30px;
+    animation: landingEffect 1s ease-out forwards, moveShadows 5s infinite;
+    box-shadow: 
+        10px 10px 30px rgba(255, 0, 0, 0.3),    
+        -10px -10px 30px rgba(0, 255, 0, 0.3),  
+        10px -10px 30px rgba(0, 0, 255, 0.3),   
+        -10px 10px 30px rgba(255, 255, 0, 0.3); 
+}
+
+.about-details-card {
+    width: 50%;
+    animation: landingEffect 1s ease-out forwards;
+}
+
+
+.about-heading {
+    color: #ffffff;
+    font-size: 52px;
+    text-align: center;
+    font-family: "Orbitron", sans-serif;
+    opacity: 0;
+    animation: landingEffect 1s ease-out forwards 0.5s; 
+}
+
+.about-description {
+    color: #ffffff;
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 21px;
+    text-align: justify;
+    opacity: 0;
+    animation: landingEffect 1s ease-out forwards 0.7s;
+}
+
+
+.highlight-text {
+    color: #8C52FF;
+}
+
+
+@media (max-width: 767px) {
+    .about-section {
+        min-height: 60vh;
+        max-height: 75vh;
+    }
+
+    .pro-pic {
+        display: none;
+    }
+
+    .about-details-card {
+        width: 80%;
+        align-self: center;
+    }
+
+    .about-heading {
+        font-size: 37px;
+    }
+}
+
+@media (max-width: 840px) {
+    .pro-pic {
+        height: 400px;
+    }
+}
+
+
+@keyframes moveShadows {
+    0% {
+        box-shadow: 
+            10px 10px 30px rgba(255, 0, 0, 0.3),   /* Red shadow */
+            -10px -10px 30px rgba(0, 255, 0, 0.3), /* Green shadow */
+            10px -10px 30px rgba(0, 0, 255, 0.3),  /* Blue shadow */
+            -10px 10px 30px rgba(255, 255, 0, 0.3);/* Yellow shadow */
+    }
+    25% {
+        box-shadow: 
+            -15px 15px 40px rgba(255, 0, 0, 0.3),   /* Red shadow */
+            15px -15px 40px rgba(0, 255, 0, 0.3),   /* Green shadow */
+            -15px -15px 40px rgba(0, 0, 255, 0.3),  /* Blue shadow */
+            15px 15px 40px rgba(255, 255, 0, 0.3);  /* Yellow shadow */
+    }
+    50% {
+        box-shadow: 
+            20px -20px 50px rgba(255, 0, 0, 0.3),   /* Red shadow */
+            -20px 20px 50px rgba(0, 255, 0, 0.3),   /* Green shadow */
+            20px 20px 50px rgba(0, 0, 255, 0.3),    /* Blue shadow */
+            -20px -20px 50px rgba(255, 255, 0, 0.3);/* Yellow shadow */
+    }
+    75% {
+        box-shadow: 
+            -10px -10px 40px rgba(255, 0, 0, 0.3),  /* Red shadow */
+            10px 10px 40px rgba(0, 255, 0, 0.3),    /* Green shadow */
+            -10px 10px 40px rgba(0, 0, 255, 0.3),   /* Blue shadow */
+            10px -10px 40px rgba(255, 255, 0, 0.3); /* Yellow shadow */
+    }
+    100% {
+        box-shadow: 
+            10px 10px 30px rgba(255, 0, 0, 0.3),    /* Red shadow */
+            -10px -10px 30px rgba(0, 255, 0, 0.3),  /* Green shadow */
+            10px -10px 30px rgba(0, 0, 255, 0.3),   /* Blue shadow */
+            -10px 10px 30px rgba(255, 255, 0, 0.3); /* Yellow shadow */
+    }
+}
+
+
+@keyframes landingEffect {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0; 
+    }
+    100% {
+        transform: translateY(0); 
+        opacity: 1;
+    }
+}

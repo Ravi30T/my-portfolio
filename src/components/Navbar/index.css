@@ -1,0 +1,13 @@
+.nav-container {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #4C70A2;
+}
+
+.logo {
+    border-style: double;
+    font-style: italic;
+    font-size: 18px;
+}

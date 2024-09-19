@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=TT+Octosquares&display=swap');  
+@import url('https://fonts.cdnfonts.com/css/cosmic');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap');
+
+
+.home-bg-img {
+    background-image: url('https://img.freepik.com/premium-photo/professional-gamer-play-computer-video-game-dark-room_77190-8473.jpg');
+    height: 100vh;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+}
+
+.home-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    transform: translateY(30px); 
+    opacity: 0; 
+    animation: landingEffect 1.2s ease-out forwards; 
+    animation-delay: 0.3s; 
+}
+
+.home-name {
+    font-family: 'Cosmic Octo', sans-serif;
+    font-size: 50px;
+    margin-bottom: 10px;
+    font-weight: 800;
+}
+
+.home-role {
+    font-family: "Orbitron", sans-serif;
+    font-size: 35px;
+    margin-top: 0px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.role-name {
+    color: #8C52FF;
+}
+
+.home-resume-btn {
+    background-color: #8C52FF;
+    border-radius: 50px;
+    padding: 8px 20px;
+    font-size: 17px;
+    color: #ffffff;
+    font-weight: 500;
+    font-family: "Orbitron", sans-serif;
+    border-width: 0px;
+    outline: none;
+    cursor: pointer;
+    height: 48px;
+    width: 180px;
+    margin-top: 5px;
+    transition: background-color 0.3s;
+}
+
+.home-resume-btn:hover {
+    background-color: #19123B;
+}
+
+.resume-btn-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.right-arrow {
+    background-color: #ffffff;
+    border-radius: 50%;
+    color: #000000;
+    font-size: 15px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.resume-text {
+    font-family: "Orbitron", sans-serif;
+}
+
+
+@keyframes landingEffect {
+    0% {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0); 
+        opacity: 1; 
+    }
+}
+
+@media (max-width: 767px){
+    .home-bg-img {
+        height: 75vh;
+    }
+
+    .home-name{
+        font-size: 27px;
+    }
+
+    .home-role{
+        font-size: 20px;
+    }
+
+    .home-resume-btn{
+        font-size: 12px;
+        height: 38px;
+        width: 130px;
+    }
+
+    .resume-btn-container {
+        justify-content: space-between;
+    }
+
+    .right-arrow {
+        font-size: 10px;
+        height: 20px;
+        width: 20px;
+    }
+}
