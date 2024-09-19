@@ -1,5 +1,8 @@
 import {useState} from 'react'
 import { FaArrowRight } from "react-icons/fa";
+import { IoInformationCircle } from "react-icons/io5";
+
+import Popup from 'reactjs-popup'
 import Slider from 'react-slick'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -49,7 +52,25 @@ const Projects = () => {
     return (
     
         <div className='projects-main-container' id="projectsSection">
-            <h1 className='my-work-main-heading'> MY WORK </h1>
+            <div className='projects-info-container'>
+                <h1 className='my-work-main-heading'> MY WORK </h1>
+                
+                <Popup
+                    modal
+                    trigger={
+                        <button className='projects-info-btn'> <IoInformationCircle /> </button>
+                    }
+                  >
+                    {close => (
+                      <div className='popup-container'>
+                        <h1 className='login-credentials-heading'> Login Credentials </h1>
+                        <p className='username-password'> <span className='username-password-heading'> Username: </span> rahul </p>
+                        <p className='username-password'> <span className='username-password-heading'> Password: </span> rahul@2021 </p> 
+                      </div>
+                    )}
+                  </Popup>
+            </div>
+            
 
             <div className='lg-projects-container'>
                 <ul className='projects-list-container'>
